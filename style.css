@@ -1,0 +1,19 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(100, 2.5px);
+    grid-template-rows: repeat(100, 2.5px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    
+}
+
