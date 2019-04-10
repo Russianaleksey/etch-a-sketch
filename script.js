@@ -21,45 +21,48 @@ console.log(pixelCount);
 const container = document.getElementById('container');
 container.style.gridTemplateColumns = `repeat(${userSquares}, ${pixelCount})`;
 container.style.gridTemplateRows = `repeat(${userSquares}, ${pixelCount})`;
+container.addEventListener('mouseover', event => {
+    if(event.target.style.background !== 'white' && !event.target.id.includes('container') && !event.target.id.includes('changed')){
+        event.target.style.background = getRandomColor();
+        event.target.setAttribute('id', 'changed')
+    }
+})
 
 
 
 var style = document.createElement('style');
 style.type = 'text/css';
-style.innerHTML = '.cssClass { color: #F00; }';
 document.getElementsByTagName('head')[0].appendChild(style);
 style = document.getElementsByTagName('style')[0];
 
 
-
+var uniqueID = 0;
 for(i = 1; i <= parseInt(userSquares); i++){
-    var specialNum = 0;
     for(j = 1; j <= parseInt(userSquares); j++){
-        var newClass = "item" + i + j + specialNum;
+        /*
+        var newClass = "item" + uniqueID;
         style.innerHTML += `.${newClass} { 
             grid-column-start: ${i};\n
             grid-column-end: ${i+1};\n
             grid-row-start:${j};\n
             grid-row-end:${j+1};\n
             background: red;
-        }`
+        }` */
         const div = document.createElement('div');
-        div.classList.add(newClass);
+        div.style.gridColumnStart = i;
+        div.style.gridColumnEnd = i+1;
+        div.style.gridRowStart = j;
+        div.style.gridRowEnd = j+1;
+        /* div.classList.add(newClass); */
         container.appendChild(div);
-        console.log(newClass);
-        specialNum++;
+        /* uniqueID++;
+        
         div.addEventListener("mouseover", function(e){
-            div.style.background = "blue";
-        })
+            div.style.background = "blue"; 
+        }) */
     }
 }
 
-/*
-.item {
-    grid-column-start: 1;
-    grid-column-end: 50;
-    grid-row-start: 1;
-    grid-row-end: 50;
-    background: red;
+function resetBoard(){
+    location.reload();
 }
-*/
