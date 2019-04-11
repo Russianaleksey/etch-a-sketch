@@ -57,13 +57,16 @@ function buildGrid(){
             div.style.gridColumnEnd = i+1;
             div.style.gridRowStart = j;
             div.style.gridRowEnd = j+1;
+            div.style.borderColor = "black";
+            div.style.borderWidth = ".1px";
+            div.style.borderStyle = "solid";
             container.appendChild(div);
         }
     }
 }
 
-let userSquares = 80;
+let userSquares = 50;
 buildGrid();
-container.style.gridTemplateColumns = `repeat(80, 6.25px)`;
-container.style.gridTemplateRows = `repeat(80, 6.25px)`;
+container.style.gridTemplateColumns = `repeat(50, 10px)`;
+container.style.gridTemplateRows = `repeat(50, 10px)`;
 
