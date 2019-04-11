@@ -14,6 +14,8 @@
     border-width: 2px;
     border-color: black;
     border-style: solid;
+    background-size: cover;
+    background: white;
     
 }
 
@@ -36,5 +38,31 @@
     font-size: 72px;
     color: white;
     
+}
+
+.div-body {
+    height: 100vh;
+    background-size: cover;
+    background-image: linear-gradient(to right, #de6262, #ffb88c)
+}
+
+.text-container {
+    position: absolute;
+    width: 33%;
+    height: 60px;
+    left: 50%;
+    top: 82%;
+    transform: translateX(-50%);
+}
+
+.main-text {
+    width: 100%;
+    font-size: 60px;
+    color: gray;
+}
+
+.main-text:hover {
+    transform: scale(1.2);
+    color: #ffc600;
 }
 
