@@ -25,11 +25,12 @@ function start (){
 
 
 container.addEventListener('mouseover', event => {
-    if(event.target.style.background !== 'white' && !event.target.id.includes('container') && !event.target.id.includes('changed')){
-        event.target.style.background = getRandomColor();
-        event.target.setAttribute('id', 'changed')
+    if(event.target.style.background !== 'white' && !event.target.id.includes('container') && !event.target.id.includes('changed')){       
+            event.target.style.background = getRandomColor();
+            event.target.setAttribute('id', 'changed');
     }
 })
+
 
 
 
@@ -61,10 +62,8 @@ function buildGrid(){
     }
 }
 
-let userSquares = 16;
+let userSquares = 80;
 buildGrid();
-container.style.gridTemplateColumns = `repeat(16, 31.25px)`;
-container.style.gridTemplateRows = `repeat(16, 31.25px)`;
-
-
+container.style.gridTemplateColumns = `repeat(80, 6.25px)`;
+container.style.gridTemplateRows = `repeat(80, 6.25px)`;
 

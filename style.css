@@ -50,7 +50,7 @@
     position: absolute;
     width: 33%;
     height: 60px;
-    left: 50%;
+    left: 53.5%;
     top: 82%;
     transform: translateX(-50%);
 }
@@ -58,7 +58,7 @@
 .main-text {
     width: 100%;
     font-size: 60px;
-    color: gray;
+    color: white;
 }
 
 .main-text:hover {
